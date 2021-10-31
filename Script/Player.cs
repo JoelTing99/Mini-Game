@@ -79,7 +79,6 @@ public class Player : MonoBehaviour
     }
     private void Update() {
         Jump();
-        
         }
     
     private void diration(){
@@ -174,7 +173,7 @@ public class Player : MonoBehaviour
         {
         JumpTime += Time.deltaTime;
         switch (Side.RotateSide)
-        {
+            {
             case 0:
                 rb.velocity = Vector2.up * JumpForce;
                 break;
@@ -187,8 +186,21 @@ public class Player : MonoBehaviour
             case 3:
                 rb.velocity = Vector2.left * JumpForce;
                 break;
+            }
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            transform.parent = collision.transform;
         }
-        
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            transform.parent = null;
+        }
     }
 }

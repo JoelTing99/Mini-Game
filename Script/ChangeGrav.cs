@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ChangeGrav : MonoBehaviour
 {
-    private Transform Camera;
+    //private Transform Camera;
     private bool TurnRight, TurnLeft, TurnUp, TurnDown;
     private bool canRoate = true;
     public int RotateSide = 0;

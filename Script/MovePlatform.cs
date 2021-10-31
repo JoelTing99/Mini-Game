@@ -7,6 +7,7 @@ public class MovePlatform : MonoBehaviour
 
     public Vector3 TargetPos;
     private Vector3 CurrentPos, StartPos, temPos;
+    
     void Start()
     {
         StartPos = transform.position;
