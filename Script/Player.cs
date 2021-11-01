@@ -194,6 +194,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             transform.parent = collision.transform;
+            
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
