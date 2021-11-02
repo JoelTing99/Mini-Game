@@ -26,7 +26,14 @@ public class EndPoint : MonoBehaviour
     }
     private void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        if(SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            StartCoroutine(LoadLevel(0));
+        }
+        else
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        }
     }
     IEnumerator LoadLevel(int LevelIndex)
     {

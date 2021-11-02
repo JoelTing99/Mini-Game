@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovePlatform : MonoBehaviour
 {
-
+    public float Speed;
     public Vector3 TargetPos;
     private Vector3 CurrentPos, StartPos, temPos;
     
@@ -16,7 +16,7 @@ public class MovePlatform : MonoBehaviour
     void Update()
     {
         CurrentPos = transform.position;
-        transform.position = Vector3.MoveTowards(CurrentPos, TargetPos, 3 * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(CurrentPos, TargetPos, Speed * Time.deltaTime);
         if(transform.position == TargetPos)
         {
             temPos = TargetPos;
