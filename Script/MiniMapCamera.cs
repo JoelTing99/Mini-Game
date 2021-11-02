@@ -19,10 +19,11 @@ public class MiniMapCamera : MonoBehaviour
     }
     private void Update()
     {
-        //if (!Player)
-        //{
-          //  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //}
+        if (!Player)
+        {
+            //  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            return;
+        }
         if (Input.GetKey(KeyCode.M) || Input.GetKey(KeyCode.Tab))
         {
             Cam.orthographicSize = CamSize;

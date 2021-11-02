@@ -809,7 +809,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3022,6 +3022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 2.5
   TargetPos: {x: 10.5, y: 12.5, z: 0}
 --- !u!61 &493855056
 BoxCollider2D:
@@ -3976,7 +3977,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6302,7 +6303,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6921,6 +6922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
   TargetPos: {x: 13, y: 6, z: 0}
 --- !u!61 &1100163534
 BoxCollider2D:
@@ -7924,7 +7926,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -8791,7 +8793,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9483,7 +9485,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9906,6 +9908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 2.5
   TargetPos: {x: 7.5, y: 10.5, z: 0}
 --- !u!61 &1611931331
 BoxCollider2D:
@@ -10826,6 +10829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
   TargetPos: {x: 7, y: 6, z: 0}
 --- !u!61 &1721114724
 BoxCollider2D:
@@ -12218,7 +12222,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -8,8 +8,8 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Destroy(collision.gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Destroy(collision.gameObject);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
     

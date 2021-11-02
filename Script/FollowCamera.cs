@@ -15,10 +15,11 @@ public class FollowCamera : MonoBehaviour
         Player = GameObject.FindWithTag("Player").transform;
     }
     private void FixedUpdate() {
-        //if (!Player)
-        //{
-         //   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //}
+        if (!Player)
+        {
+            //   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            return;
+        }
         transform.position = Vector3.Lerp(transform.position, Player.position + new Vector3(0, 0, -10), smoothspeed);
     }
 
