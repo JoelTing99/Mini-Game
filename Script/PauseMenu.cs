@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject Button;
     public GameObject PauseMenuUI;
     public GameObject CrossFade;
+    public GameObject setting;
 
     public AudioSource AudioSource;
     public AudioClip highlightSound;
@@ -47,6 +48,8 @@ public class PauseMenu : MonoBehaviour
     }
     private IEnumerator resume(float time)
     {
+        setting.SetActive(false);
+        PauseMenuUI.SetActive(true);
         JumpBar.SetActive(true);
         MiniMap.SetActive(true);
         Button.SetActive(true);
@@ -58,7 +61,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void Pause()
     {
-        
         PauseMenuUI.SetActive(true);
         JumpBar.SetActive(false);
         MiniMap.SetActive(false);
@@ -69,7 +71,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void Setting()
     {
-
+        StartCoroutine(LoadSetting());
+    }
+    private IEnumerator LoadSetting()
+    {
+        MenuAnim.SetBool("Paused", false);
+        setting.SetActive(true);
+        yield return new WaitForSecondsRealtime(0.5f);
+        PauseMenuUI.SetActive(false);
     }
     public void LoadMenu()
     {
@@ -100,5 +109,18 @@ public class PauseMenu : MonoBehaviour
     public void Clicksound()
     {
         AudioSource.PlayOneShot(ClickSound);
+    }
+    public void Back()
+    {
+        PauseMenuUI.SetActive(true);
+        MenuAnim.SetBool("Paused", true);
+        setting.GetComponent<Animator>().SetTrigger("Closs");
+        StartCoroutine(BackToMenu());
+    }
+    private IEnumerator BackToMenu()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        setting.SetActive(false);
+        
     }
 }

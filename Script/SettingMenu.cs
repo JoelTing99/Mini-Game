@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
 {
-    public MainMenu Menu;
+    private MainMenu Menu;
 
     public AudioMixer Mixer;
 
@@ -18,6 +18,8 @@ public class SettingMenu : MonoBehaviour
 
     void Start()
     {
+        Menu = FindObjectOfType<MainMenu>();
+
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
