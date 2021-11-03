@@ -31,8 +31,9 @@ public class Laser : MonoBehaviour
             Line.SetPosition(1, hitInfo.point);
             if (hitInfo.collider.CompareTag("Player"))
             {
-                //Destroy(hitInfo.collider.gameObject);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                FindObjectOfType<DieEffect>().Dead(hitInfo.collider.transform.position);
+                FindObjectOfType<AudioManager>().Play("DieSound");
+                Destroy(hitInfo.collider.gameObject);
             }
         }
         Line.SetPosition(0, transform.position);

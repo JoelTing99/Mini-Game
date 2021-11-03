@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class EndPoint : MonoBehaviour
@@ -26,7 +27,8 @@ public class EndPoint : MonoBehaviour
     }
     private void LoadNextLevel()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 10)
+        FindObjectOfType<AudioManager>().Play("EndSound");
+        if (SceneManager.GetActiveScene().buildIndex == 10)
         {
             StartCoroutine(LoadLevel(0));
         }

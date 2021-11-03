@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LandEffect: {fileID: 552617231637166528, guid: 81a7610902debf245baeeff4659ad008, type: 3}
+  DieEffect: {fileID: 7500534374034453336, guid: e8380a2c85d6d1b4aa4183c7d6da2312, type: 3}
   GroundChack: {fileID: 8519002362925319353}
   WhatIsGround:
     serializedVersion: 2
@@ -337,6 +338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateSide: 0
+  RotateCount: 0
+  rotateText: {fileID: 0}
   CamShake: {fileID: 0}
 --- !u!95 &8519002362853149802
 Animator:
@@ -369,7 +372,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: a4c671fca372b55439c2eba29d6d006e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

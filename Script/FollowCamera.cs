@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class FollowCamera : MonoBehaviour
 {
     private Transform Player;
-
     private float smoothspeed = 0.075f;
 
 
@@ -17,7 +16,6 @@ public class FollowCamera : MonoBehaviour
     private void FixedUpdate() {
         if (!Player)
         {
-            //   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             return;
         }
         transform.position = Vector3.Lerp(transform.position, Player.position + new Vector3(0, 0, -10), smoothspeed);

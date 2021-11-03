@@ -792,8 +792,9 @@ GameObject:
   - component: {fileID: 100594080}
   - component: {fileID: 100594079}
   - component: {fileID: 100594081}
+  - component: {fileID: 100594082}
   m_Layer: 0
-  m_Name: Audio
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,6 +922,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83489477312de414d8015519c3e30b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - name: DieSound
+    clip: {fileID: 8300000, guid: b1a8dd7439d28b9408428d427f23e6ef, type: 3}
+    Mixer: {fileID: 24300002, guid: a4c671fca372b55439c2eba29d6d006e, type: 2}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: EndSound
+    clip: {fileID: 8300000, guid: 6899b157ea7eb21438ac0bd1a4f80663, type: 3}
+    Mixer: {fileID: 24300002, guid: a4c671fca372b55439c2eba29d6d006e, type: 2}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+--- !u!114 &100594082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100594078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e037828f40bae2c49b53ec7736ef1e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieEffect: {fileID: 7500534374034453336, guid: e8380a2c85d6d1b4aa4183c7d6da2312, type: 3}
 --- !u!1 &135563064
 GameObject:
   m_ObjectHideFlags: 0
