@@ -15,9 +15,13 @@ public class SettingMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
 
     private Resolution[] resolutions;
+    private Slider slider;
 
     void Start()
     {
+        slider = GameObject.Find("Volume").GetComponent<Slider>();
+        slider.value = PlayerPrefs.GetFloat("volume", slider.value);
+
         Menu = FindObjectOfType<MainMenu>();
 
         resolutions = Screen.resolutions;
@@ -49,6 +53,7 @@ public class SettingMenu : MonoBehaviour
     public void Volume(float volume)
     {
         Mixer.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("volume", volume);
         float percentage = 80 + volume;
         volumePercentage.text = percentage.ToString() + "%";
     }
