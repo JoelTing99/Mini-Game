@@ -7158,7 +7158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d527f2f43c02f043ac7f38737e831f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Menu: {fileID: 2073240901}
   Mixer: {fileID: 24100000, guid: a4c671fca372b55439c2eba29d6d006e, type: 2}
   volumePercentage: {fileID: 671256399}
   resolutionDropdown: {fileID: 1975588301}
@@ -9470,8 +9469,8 @@ MonoBehaviour:
   Platform: {fileID: 1920611277}
   CrossFade: {fileID: 1259474190}
   AudioSource: {fileID: 2073240902}
-  highlightSound: {fileID: 8300000, guid: 030515f205b54fc478961cbe39c4e75e, type: 3}
-  ClickSound: {fileID: 8300000, guid: 99348d26b121bdf40bca2ff30b000207, type: 3}
+  highlightSound: {fileID: 8300000, guid: 19ee23220d478354ca29f732069ff0d0, type: 3}
+  ClickSound: {fileID: 8300000, guid: 0e6d4d48fef8bd34f9a18cc6b7ed156c, type: 3}
 --- !u!82 &2073240902
 AudioSource:
   m_ObjectHideFlags: 0

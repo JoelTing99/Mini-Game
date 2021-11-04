@@ -316,13 +316,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LandEffect: {fileID: 552617231637166528, guid: 81a7610902debf245baeeff4659ad008, type: 3}
-  DieEffect: {fileID: 7500534374034453336, guid: e8380a2c85d6d1b4aa4183c7d6da2312, type: 3}
   GroundChack: {fileID: 8519002362925319353}
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 64
   JumpSound: {fileID: 1702507214}
-  JumpBar: {fileID: 0}
+  JumpBar: {fileID: 6308608212489326636, guid: 88f1fb1267d07134fba9b81e83d81fb6, type: 3}
   Speed: 7
   JumpForce: 10
 --- !u!114 &8077546075734641048
@@ -339,8 +338,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotateSide: 0
   RotateCount: 0
-  rotateText: {fileID: 0}
-  CamShake: {fileID: 0}
+  rotateText: {fileID: 5588528143548687812, guid: 66ca1a69fc3798545b69d6be46b2efa6, type: 3}
+  CamShake: {fileID: 7684554522999065397, guid: 4944d710906759e4f9e726d67615a37d, type: 3}
 --- !u!95 &8519002362853149802
 Animator:
   serializedVersion: 3

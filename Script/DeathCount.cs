@@ -28,5 +28,9 @@ public class DeathCount : MonoBehaviour
             PlayerPrefs.SetInt("Deadcount", Deadcount);
             
         }
+        if (Input.GetKeyDown(KeyCode.R) && !GameObject.FindWithTag("Player"))
+        {
+            FindObjectOfType<PauseMenu>().Restart();
+        }
     }
 }
