@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class FollowCamera : MonoBehaviour
 {
     private Transform Player;
-    private float smoothspeed = 0.075f;
+    private float smoothspeed = 0.1f;
 
 
     void Start()

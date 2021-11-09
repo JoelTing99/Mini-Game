@@ -1619,7 +1619,7 @@ PrefabInstance:
     - target: {fileID: 8519002362853149801, guid: a8bb35c9485c131459ede137dcb09a32, type: 3}
       propertyPath: JumpBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2098250073}
     - target: {fileID: 8519002362853149803, guid: a8bb35c9485c131459ede137dcb09a32, type: 3}
       propertyPath: m_Name
       value: Player

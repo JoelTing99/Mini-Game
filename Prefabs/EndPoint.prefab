@@ -299,9 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c72b7b57f5fed64f9b386ad8b7cf319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Transition: {fileID: 0}
-  CrossFade: {fileID: 0}
-  EndEffect: {fileID: 3585101470048263879}
+  Transition: {fileID: 8969680062735908253, guid: 15284faf5a398b44ca5d30f2c9c4332f, type: 3}
+  CrossFade: {fileID: 8969680062735908252, guid: 15284faf5a398b44ca5d30f2c9c4332f, type: 3}
 --- !u!82 &3585101470048263879
 AudioSource:
   m_ObjectHideFlags: 0

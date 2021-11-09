@@ -321,7 +321,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   JumpSound: {fileID: 1702507214}
-  JumpBar: {fileID: 6308608212489326636, guid: 88f1fb1267d07134fba9b81e83d81fb6, type: 3}
   Speed: 7
   JumpForce: 10
 --- !u!114 &8077546075734641048
@@ -338,8 +337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotateSide: 0
   RotateCount: 0
-  rotateText: {fileID: 5588528143548687812, guid: 66ca1a69fc3798545b69d6be46b2efa6, type: 3}
-  CamShake: {fileID: 7684554522999065397, guid: 4944d710906759e4f9e726d67615a37d, type: 3}
+  rotateText: {fileID: 8698946658172375692, guid: dbded6e7a8ad00d40af6800397b05100, type: 3}
+  CamShake: {fileID: 4812926276606187044, guid: d4789e5801225474b8b152ed9fbe88a4, type: 3}
 --- !u!95 &8519002362853149802
 Animator:
   serializedVersion: 3

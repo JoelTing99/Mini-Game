@@ -14,12 +14,11 @@ public class Player : MonoBehaviour
     private ChangeGrav Side;
     private Vector3 animDirationRight, animDirationLeft;
     public AudioSource JumpSound;
-    public JumpBar JumpBar;
+    private JumpBar JumpBar;
 
 
     private int dirationX, dirationY;
     private int Effectcount;
-    private int Soundcount;
     private int SpaceCount;
 
 
@@ -36,6 +35,7 @@ public class Player : MonoBehaviour
         Side = GetComponent<ChangeGrav>();
         rb = GetComponent<Rigidbody2D>(); 
         anim = GetComponent<Animator>();
+        JumpBar = FindObjectOfType<JumpBar>();
         JumpBar.SetMaxCharge(JumpTime);
     }
 
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         diration();
         MoveMent();
         Flip();
-        Isgrounded = Physics2D.OverlapCircle(GroundChack.position, 0.2f, WhatIsGround);
+        Isgrounded = Physics2D.OverlapCircle(GroundChack.position, 0.3f, WhatIsGround);
         if (Isgrounded){
             IsJumping = false;
             
@@ -54,19 +54,14 @@ public class Player : MonoBehaviour
             if(Effectcount < 1)
             {
                 Instantiate(LandEffect, GroundChack.position, Quaternion.Euler(180, 0, 0));
+                Effectcount++;
             }
-            Soundcount = 0;
-            Effectcount++;
+            
         }else{
             IsJumping = true;
             Effectcount = 0;
-            if (Soundcount < 1 && Input.GetKey(KeyCode.Space))
-            {
-                JumpSound.Play();
-                Soundcount++;
-                
-            }
         }
+
         if (IsJumping)
         {
             anim.SetBool("IsJumping", true);
@@ -79,7 +74,11 @@ public class Player : MonoBehaviour
     }
     private void Update() {
         Jump();
+        if (Input.GetKeyDown(KeyCode.Space) && Isgrounded)
+        {
+            JumpSound.Play();
         }
+    }
     
     private void diration(){
         switch (Side.RotateSide)
@@ -204,4 +203,5 @@ public class Player : MonoBehaviour
             transform.parent = null;
         }
     }
+    
 }

@@ -8,8 +8,11 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
+    public AudioMixer mixer;
     void Awake()
     {
+        mixer.SetFloat("volume", PlayerPrefs.GetFloat("volume", 80));
+
         if (!instance)
         {
             instance = this;

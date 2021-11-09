@@ -34,6 +34,7 @@ public class ChangeGrav : MonoBehaviour
         TurnDown = Input.GetKeyDown(KeyCode.DownArrow);
         if (TurnRight && canRoate && RotateCount > 0)
         {
+            RotateCount -= 1;
             canRoate = false;
             RotateSide -= 1;
             StartCoroutine(SlowSpin(90, 0.3f));
@@ -45,6 +46,7 @@ public class ChangeGrav : MonoBehaviour
         }
         if (TurnLeft && canRoate && RotateCount > 0)
         {
+            RotateCount -= 1;
             canRoate = false;
             RotateSide += 1;
             StartCoroutine(SlowSpin(90, -0.3f));
@@ -55,7 +57,7 @@ public class ChangeGrav : MonoBehaviour
         }
         if (TurnUp || TurnDown)
         {
-            if(RotateCount > 0)
+            if(RotateCount > 1)
             {
                 RotateCount -= 1;
                 if (canRoate)
@@ -78,10 +80,6 @@ public class ChangeGrav : MonoBehaviour
         }
         if (TurnRight || TurnLeft || TurnUp || TurnDown)
         {
-            if(RotateCount > 0)
-            {
-                RotateCount -= 1;
-            }
             switch (RotateSide)
             {
                 case 0:
@@ -132,7 +130,7 @@ public class ChangeGrav : MonoBehaviour
                 count += rotationAmount;
             }
             
-            yield return new WaitForSeconds(0.000001f);
+            yield return new WaitForSeconds(0.0001f);
             
         }
         if (Camera.transform.rotation.eulerAngles.z < 91f && Camera.transform.rotation.eulerAngles.z > 89f)

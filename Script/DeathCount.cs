@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DeathCount : MonoBehaviour
 {
-    public Text Count;
     public GameObject Dead;
     private int Deadcount;
     private int Limit;
@@ -13,19 +13,18 @@ public class DeathCount : MonoBehaviour
     void Start()
     {
         Limit = 0;
-        Deadcount = PlayerPrefs.GetInt("Deadcount", 0);
+        Deadcount = PlayerPrefs.GetInt($"Deadcount{SceneManager.GetActiveScene().buildIndex}", 0);
     }
 
     void Update()
     {
-        Count.text = Deadcount.ToString();
         if (!GameObject.FindWithTag("Player") && Limit < 1)
         {   
 
             Dead.SetActive(true);
             Deadcount++;
             Limit++;
-            PlayerPrefs.SetInt("Deadcount", Deadcount);
+            PlayerPrefs.SetInt($"Deadcount{SceneManager.GetActiveScene().buildIndex}", Deadcount);
             
         }
         if (Input.GetKeyDown(KeyCode.R) && !GameObject.FindWithTag("Player"))

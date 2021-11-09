@@ -11,7 +11,7 @@ public class MiniMapCamera : MonoBehaviour
     public float MidX, MidY;
     public float CamSize, CamNormalSize;
 
-    private float smoothspeed = 0.075f;
+    private float smoothspeed = 0.1f;
     void Start()
     {
         Player = GameObject.FindWithTag("Player").transform;
