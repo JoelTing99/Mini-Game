@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
@@ -8,10 +9,11 @@ public class LevelSelect : MonoBehaviour
     private int level;
     public Animator CrossFade;
     public MainMenu Menu;
+    public GameObject Level;
     public GameObject[] Completed;
     private void Start()
     {
-        for (int i = 1; i < 11; i++)
+        for (int i = 1; i < 31; i++)
         {
             if (PlayerPrefs.GetString("Completed").Contains($"{i}"))
             {
@@ -52,5 +54,9 @@ public class LevelSelect : MonoBehaviour
         {
             Completed[i - 1].SetActive(false);
         }
+    }
+    public void Scroll(float value)
+    {
+        Level.transform.localPosition = new Vector3(-value * 1000f, 0, 0);
     }
 }

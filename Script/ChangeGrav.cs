@@ -13,13 +13,12 @@ public class ChangeGrav : MonoBehaviour
     public Text rotateText;
     private GameObject Camera;
     private Player player;
-    public Animator CamShake;
+    private Animator CamShake;
     private float count;
-
-
 
     void Start() {
         Camera = GameObject.FindWithTag("MainCamera");
+        CamShake = Camera.GetComponent<Animator>();
         player = GetComponent<Player>();
     }
     void Update()

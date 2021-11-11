@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class EndPoint : MonoBehaviour
 {
-    public Animator Transition;
-    public GameObject CrossFade;
+    private Animator Transition;
+    private GameObject CrossFade;
     private string CompletedLevel;
+    private void Awake()
+    {
+        Transition = GameObject.FindWithTag("CrossFade").GetComponent<Animator>();
+        CrossFade = GameObject.FindWithTag("CrossFade");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
