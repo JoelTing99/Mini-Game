@@ -13,7 +13,7 @@ public class MovePlatform : MonoBehaviour
         StartPos = transform.position;
         
     }
-    void Update()
+    void FixedUpdate()
     {
         CurrentPos = transform.position;
         transform.position = Vector3.MoveTowards(CurrentPos, TargetPos, Speed * Time.deltaTime);

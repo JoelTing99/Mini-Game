@@ -58,7 +58,7 @@ public class ChangeGrav : MonoBehaviour
         {
             if(RotateCount > 1)
             {
-                RotateCount -= 1;
+                RotateCount -= 2;
                 if (canRoate)
                 {
                     canRoate = false;
