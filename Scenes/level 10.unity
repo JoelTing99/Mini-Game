@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  Speed: 3
   TargetPos: {x: -19, y: 28.5, z: 0}
 --- !u!61 &126057377
 BoxCollider2D:
@@ -3982,7 +3982,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567ed71be7804e1498a2603ef5c954e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Count: {fileID: 1478685158}
   Dead: {fileID: 383494460}
 --- !u!114 &453713092
 MonoBehaviour:
@@ -7470,7 +7469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  Speed: 3
   TargetPos: {x: -19, y: 28.5, z: 0}
 --- !u!61 &1018287506
 BoxCollider2D:
@@ -9033,7 +9032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  Speed: 3
   TargetPos: {x: -19, y: 28.5, z: 0}
 --- !u!61 &1192052816
 BoxCollider2D:
