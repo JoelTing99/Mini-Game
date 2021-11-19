@@ -9,11 +9,13 @@ public class LevelSelect : MonoBehaviour
     private int level;
     public Animator CrossFade;
     public MainMenu Menu;
+    public Slider Slider;
     public GameObject Level;
+    public GameObject Levelselect_Text;
     public GameObject[] Completed;
     private void Start()
     {
-        for (int i = 1; i < 31; i++)
+        for (int i = 1; i < Completed.Length + 1; i++)
         {
             if (PlayerPrefs.GetString("Completed").Contains($"{i}"))
             {
@@ -27,6 +29,10 @@ public class LevelSelect : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Back();
+        }
+        if(Input.GetAxis("Mouse ScrollWheel") != 0)
+        {
+            Slider.value -= Input.GetAxis("Mouse ScrollWheel") * 1.1f;
         }
     }
     public void Choose()
@@ -57,6 +63,13 @@ public class LevelSelect : MonoBehaviour
     }
     public void Scroll(float value)
     {
-        Level.transform.localPosition = new Vector3(-value * 1000f, 0, 0);
+        Level.transform.localPosition = new Vector3(0, value * 100f, 0);
+        if(value >= 0.6f)
+        {
+            Levelselect_Text.SetActive(false);
+        }else
+        {
+            Levelselect_Text.SetActive(true);
+        }
     }
 }
