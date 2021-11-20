@@ -45,6 +45,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
+        FindObjectOfType<DeathCount>().Deadcount++;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private IEnumerator resume(float time)

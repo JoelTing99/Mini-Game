@@ -15,12 +15,12 @@ public class SettingMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
 
     private Resolution[] resolutions;
-    private Slider slider;
+    public Slider slider;
 
-    void Start()
+    void Awake()
     {
-        slider = GameObject.Find("Volume").GetComponent<Slider>();
-        slider.value = PlayerPrefs.GetFloat("volume", slider.value);
+        Mixer.SetFloat("volume", PlayerPrefs.GetFloat("volume", 0));
+        slider.value = PlayerPrefs.GetFloat("volume", 0);
 
         Menu = FindObjectOfType<MainMenu>();
 
@@ -42,6 +42,7 @@ public class SettingMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
     }
     public void Back()
     {

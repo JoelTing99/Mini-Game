@@ -14,10 +14,18 @@ public class MainMenu : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip highlightSound;
     public AudioClip ClickSound;
+    public AudioMixer Mixer;
+
+    private void Awake()
+    {
+        SettingMenu.SetActive(true);
+    }
     private void Start()
     {
         StartCoroutine(Unactive());
         StartCoroutine(Active());
+        Mixer.SetFloat("volume", PlayerPrefs.GetFloat("volume"));
+        SettingMenu.SetActive(false);
     }
     public void Quit()
     {

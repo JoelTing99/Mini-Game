@@ -1690,6 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dead: {fileID: 7985884868339653468}
+  Deadcount: 0
 --- !u!82 &7985884868999962776
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3744,6 +3745,7 @@ MonoBehaviour:
   Mixer: {fileID: 24100000, guid: a4c671fca372b55439c2eba29d6d006e, type: 2}
   volumePercentage: {fileID: 7985884869368100742}
   resolutionDropdown: {fileID: 7985884869801646402}
+  slider: {fileID: 7985884869570989545}
 --- !u!1 &7985884869865399722
 GameObject:
   m_ObjectHideFlags: 0

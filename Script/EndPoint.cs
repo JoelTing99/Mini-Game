@@ -8,7 +8,6 @@ public class EndPoint : MonoBehaviour
 {
     private Animator Transition;
     private GameObject CrossFade;
-    private string CompletedLevel;
     private void Awake()
     {
         Transition = GameObject.FindWithTag("CrossFade").GetComponent<Animator>();
@@ -26,9 +25,7 @@ public class EndPoint : MonoBehaviour
     }
     private void SaveCompletedLevel()
     {
-        CompletedLevel = PlayerPrefs.GetString("Completed");
-        CompletedLevel += SceneManager.GetActiveScene().buildIndex.ToString();
-        PlayerPrefs.SetString("Completed", CompletedLevel);
+        PlayerPrefs.SetInt($"Completed{SceneManager.GetActiveScene().buildIndex}", SceneManager.GetActiveScene().buildIndex);
     }
     private void LoadNextLevel()
     {
