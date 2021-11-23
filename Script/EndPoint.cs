@@ -30,7 +30,7 @@ public class EndPoint : MonoBehaviour
     private void LoadNextLevel()
     {
         FindObjectOfType<AudioManager>().Play("EndSound");
-        if (SceneManager.GetActiveScene().buildIndex == 10)
+        if (SceneManager.GetActiveScene().buildIndex == 25)
         {
             StartCoroutine(LoadLevel(0));
         }

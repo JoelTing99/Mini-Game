@@ -18,6 +18,13 @@ public class FollowCamera : MonoBehaviour
         {
             return;
         }
+        if(Vector2.Distance(Player.position, transform.position) >= 3)
+        {
+            smoothspeed = 0.2f;
+        }else
+        {
+            smoothspeed = 0.1f;
+        }
         transform.position = Vector3.Lerp(transform.position, Player.position + new Vector3(0, 0, -10), smoothspeed);
     }
 

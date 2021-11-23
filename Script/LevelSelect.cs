@@ -25,18 +25,11 @@ public class LevelSelect : MonoBehaviour
                     Lock[i].SetActive(false);
                 }
             }
-
         }
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            for (int i = 0; i < Lock.Length - 1; i++)
-            {
 
-            }
-        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Back();
@@ -49,9 +42,11 @@ public class LevelSelect : MonoBehaviour
     public void Choose()
     {
         level = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
-        
-        PlayerPrefs.DeleteKey($"Deadcount{level}");
         StartCoroutine(Loading());
+    }
+    public void resetDeadCount()
+    {
+        PlayerPrefs.DeleteKey($"Deadcount{level}");
     }
     IEnumerator Loading()
     {
@@ -85,13 +80,6 @@ public class LevelSelect : MonoBehaviour
         }else
         {
             Levelselect_Text.SetActive(true);
-        }
-    }
-    public void RightClick()
-    {
-        if (Input.GetMouseButton(1))
-        {
-            Debug.Log("Test");
         }
     }
 }

@@ -8,7 +8,8 @@ public class click : MonoBehaviour, IPointerClickHandler
 {
     public GameObject Panel;
     public Text Count;
-    private bool isOpened = false; 
+    private bool isOpened = false;
+
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         if (pointerEventData.button == PointerEventData.InputButton.Right)
@@ -24,8 +25,6 @@ public class click : MonoBehaviour, IPointerClickHandler
                 Count.text = PlayerPrefs.GetInt($"Deadcount{name}", 0).ToString();
                 isOpened = true;
             }
-
-
         }
 
     }
