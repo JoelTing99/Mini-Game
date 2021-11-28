@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4812926276606187046}
   - component: {fileID: 4812926276606187045}
   - component: {fileID: 4812926276606187044}
+  - component: {fileID: 7830620607747832962}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -60,7 +61,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -103,3 +104,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7830620607747832962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4812926276606187098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34f3be723b7d574b88248c5ed72fdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list:
+  - cam: {fileID: 4812926276606187098}
+    deleteQuestion: 0
+    hotkey: 284
+  settings:
+    signatureColor: {r: 1, g: 0, b: 0.5, a: 1}
+    customFileName: 
+    includeProject: 1
+    includeCamera: 1
+    includeDate: 1
+    includeResolution: 0
+    includeCounter: 0
+    counter: 0
+    fileType: 0
+    applicationPath: 0
+    customDirectoryName: 
+    captureMethod: 0
+    singleCamera: 0
+    renderSizeMultiplier: 1
+    captureSizeMultiplier: 1
+    cutoutPosition: {x: 0, y: 0}
+    cutoutSize: {x: 0, y: 0}
+  foldoutSettings: 0
+  lastCamID: 0
+  lastCam: {fileID: 4812926276606187046}

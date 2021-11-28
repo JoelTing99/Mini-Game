@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 786240133}
     - target: {fileID: 8077546075734641048, guid: a8bb35c9485c131459ede137dcb09a32, type: 3}
       propertyPath: RotateCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8519002362491506146, guid: a8bb35c9485c131459ede137dcb09a32, type: 3}
       propertyPath: m_RootOrder
@@ -1190,8 +1190,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334662024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -10, z: 0}
-  m_LocalScale: {x: 17, y: 0.25, z: 1}
+  m_LocalPosition: {x: -7, y: -10, z: 0}
+  m_LocalScale: {x: 14, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1048816576}
   m_RootOrder: 4
@@ -1853,7 +1853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538463834}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -17, y: -9, z: 0}
+  m_LocalPosition: {x: -14, y: -9, z: 0}
   m_LocalScale: {x: 2, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1048816576}
@@ -2062,8 +2062,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705259440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: -7.98, z: 0}
-  m_LocalScale: {x: 12, y: 0.25, z: 1}
+  m_LocalPosition: {x: -9.5, y: -7.98, z: 0}
+  m_LocalScale: {x: 9, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1048816576}
   m_RootOrder: 7
@@ -2504,8 +2504,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866435529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: -9, z: 0}
-  m_LocalScale: {x: 12, y: 2, z: 1}
+  m_LocalPosition: {x: -9.5, y: -9, z: 0}
+  m_LocalScale: {x: 9, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1451548928}
   m_RootOrder: 7
@@ -3369,7 +3369,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.012030527, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3380,7 +3380,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9759389, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1046967875
 MonoBehaviour:
@@ -6475,7 +6475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe984a0d8e7034cbb00d3b1214116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 2
   TargetPos: {x: -6.5, y: -0.5, z: 0}
 --- !u!61 &2095417914
 BoxCollider2D:

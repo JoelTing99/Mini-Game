@@ -26,7 +26,5 @@ public class click : MonoBehaviour, IPointerClickHandler
                 isOpened = true;
             }
         }
-
     }
-    
 }

@@ -46,7 +46,10 @@ public class LevelSelect : MonoBehaviour
     }
     public void resetDeadCount()
     {
-        PlayerPrefs.DeleteKey($"Deadcount{level}");
+        for (int i = 1; i < Completed.Length + 1; i++)
+        {
+            PlayerPrefs.DeleteKey($"Deadcount{i}");
+        }
     }
     IEnumerator Loading()
     {
